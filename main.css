@@ -1,8 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     background-color: lightgreen;
 }
 
+h1 {
+    margin: 0px;
+}
+
+/* Dette er stripa øverst på nettsida. */
 header {
     display: flex;
     width: 100%;
@@ -12,11 +21,7 @@ header {
     box-sizing: border-box;
 }
 
-h1 {
-    margin: 0px;
-}
-
-#forsideBakgrunn {
+#forside-bakgrunn {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -35,20 +40,19 @@ h1 {
     align-items: center;
     position: absolute;
     top: 0px;
-    pointer-events: none;
     flex-direction: column;
 }
 
-button {
-    cursor: pointer;
-}
-
-#slagord-holder button {
-    background-color: rgb(204, 94, 94);
+#slagord-holder a {
+    background-color: rgb(168, 43, 43);
     border: none;
     padding: 16px;
     border-radius: 50px;
     color: white;
+    border: 2px solid #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #slagord {
@@ -64,74 +68,85 @@ button {
     font-style: normal;
 }
 
-#logo {
+.hovedinnhold {
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 8px 32px #000;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+
 }
 
-section {
+#hovedside-innhold {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-
-    background-color: white;
     top: 90vh;
-    display: flex;
     width: 50%;
-    flex-direction: column;
     position: absolute;
     height: 1250px;
-    padding: 32px;
-    border-radius: 32px;
-    box-shadow: 0px 8px 32px #000;
 }
 
-section h1 {
+.hovedinnhold h1 {
     margin: 0px;
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section p {
+.hovedinnhold p {
     font-size: larger;
 }
 
-input[type='checkbox'] {
+/* Dette er navigasjonsmenyen. */
+#navigasjon-sjekkboks {
     display: none;
 }
 
-ul {
+#navigasjon-linker {
     display: block;
-    background-color: black;
-    position: fixed;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    position: absolute;
     left: 0px;
-    top: 0px;
+    top: 8px;
     margin: 0px;
-    height: 100%;
     padding: 64px;
-    z-index: 100;
+    padding-top: 86px;
+    z-index: 200;
     display: flex;
     flex-direction: column;
     gap: 36px;
+    border-radius: 24px;
+    margin: 16px;
+    box-shadow: 0px 8px 16px #00000089;
+    list-style-type: none;
 }
 
-li a {
-    text-decoration: none;
-    color: white;
-    font-size: xx-large;
-    transition: text-shadow, transform 0.1s ease-in-out;
-    transform: scale(1);
-    display: inline-block;
-}
-
-li a:hover {
-    text-shadow: 0px 0px 16px #fff, 0px 0px 16px #ffffff, 0px 0px 64px #fff;
-    transform: scale(1.125);
-}
-
-input[type='checkbox']:not(:checked)+ul {
+#navigasjon-sjekkboks:not(:checked) + #navigasjon-linker {
     display: none;
 }
 
-label {
+#navigasjon-linker a {
+    text-decoration: none;
+    font-size: xx-large;
+    color: black;
+    transition: text-shadow, transform 0.1s ease-in-out;
+    transform: scale(1);
+    display: inline-block;
+    user-select: none;
+}
+
+#navigasjon-linker a.her {
+    text-shadow: 0px 0px 16px #178d29, 0px 0px 16px #28c23f, 0px 0px 64px #21b343;
+}
+
+#navigasjon-linker a:hover {
+    transform: scale(1.125);
+}
+
+#navigasjon-knapp {
     display: block;
     align-self: center;
     cursor: pointer;
@@ -139,10 +154,8 @@ label {
     justify-self: left;
     flex: 1;
     font-weight: 700;
-}
-
-#right {
-    flex: 1;
+    z-index: 9999;
+    user-select: none;
 }
 
 .nyhetsholder {
