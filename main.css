@@ -32,6 +32,17 @@ header {
     object-position: 0px 0px;
 }
 
+#bildebanner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
 #slagord-holder {
     width: 100%;
     display: flex;
@@ -88,6 +99,15 @@ header {
     height: 1250px;
 }
 
+#innhold {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 400px;
+    width: 50%;
+    position: absolute;
+}
+
 .hovedinnhold h1 {
     margin: 0px;
     font-size: xx-large;
@@ -96,6 +116,8 @@ header {
 
 .hovedinnhold p {
     font-size: larger;
+    font-family: Helvetica;
+    line-height: 1.5em;
 }
 
 /* Dette er navigasjonsmenyen. */
@@ -124,7 +146,7 @@ header {
     list-style-type: none;
 }
 
-#navigasjon-sjekkboks:not(:checked) + #navigasjon-linker {
+#navigasjon-sjekkboks:not(:checked)+#navigasjon-linker {
     display: none;
 }
 
@@ -177,6 +199,7 @@ header {
     flex-direction: column;
     border: solid 1px #0000006f;
 }
+
 .nyhetsholder img {
     border-radius: 32px;
     box-shadow: inset 0px 0px 5px #000;
@@ -186,4 +209,48 @@ header {
     padding: 24px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#blikjent-holder {
+    align-self: center;
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . .";
+}
+
+#blikjent-holder a {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#blikjent-holder img {
+    aspect-ratio: 1;
+    box-shadow: 0px 12px 16px #00000075;
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+#blikjent-holder h2 {
+    margin: 0px;
+}
+
+#blikjent-holder div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
 }
