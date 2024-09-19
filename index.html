@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">=</label>
@@ -24,22 +26,22 @@
     </header>
     <div id="slagord-holder">
         <h1 id="slagord" class="pacifico-regular">Velkommen til framtidens Bergen.</h1>
-        <a href="#vår-visjon">Lær mer</a>
+        <a href="#informasjon">Lær mer</a>
     </div>
     <img id="forside-bakgrunn" src="bilder/forside_bakgrunn.webp" alt="Et bærekraftig Bergen" draggable="false">
 
 
 
     <section class="hovedinnhold" id="hovedside-innhold">
-        <h1>Oppdateringer</h1>
-        <div class="nyhetsholder">
+        <h1>Prosjektstatus</h1>
+        <div class="statusholder">
             <a>
                 <img src="bilder/regnsensor.webp" alt="Regnsensor på tak" width="256px">
-                <h3>Regnsensorer aktivert</h3>
+                <h3>Regnsensorer aktive</h3>
             </a>
             <a>
-                <img src="bilder/regnsensor.webp" alt="Regnsensor på tak" width="256px">
-                <h3>Regnsensorer aktivert</h3>
+                <img src="bilder/co2-sensor.png" alt="CO2-sensor på vegg" width="256px">
+                <h3>CO2-sensorer aktive</h3>
             </a>
             <a>
                 <img src="bilder/regnsensor.webp" alt="Regnsensor på tak" width="256px">
@@ -54,16 +56,32 @@
                 <h3>Regnsensorer aktivert</h3>
             </a>
         </div>
-        <h1 id="Informasjon">Informasjon om oppdateringer</h1>
-        <p> Ovenfor ser du våre regnsensorer som er plassert ut i Bergen by. Vi jobber med GPS posisjon av sensorene på kartet, slik at du kan trykke deg inn å se hvor hver enkelt står.
-            Sensorene er montert på husvegger og tak for unngå fasadeendringer slik at byen holder samme stil. 
-        </p>
-        <p> Sensorene er montert for å kunne måle og registrere endringer i regnbør og CO2 utslipp i Bergen sentrum. 
-            Dette har vi gjort for at du som innbygger i Bergen sentrum skal bli informert om hvordan miljøet rundt deg er.
-        </p>
-        <p> Ettersom prosjektet er bærekraftig skal ikke sensorene være synlige med mindre man er ekstra observant.
-            Vi benytter oss også av resirkulert elektronikk for å holde klimautslippet lavt, da sparer vi miljøet for ekstra utslipp og ressurser.
-        </p>
+        <section id="info-nyheter-holder">
+            <article>
+                <h1 id="informasjon">Informasjon om oppdateringer</h1>
+                <p> Ovenfor ser du våre regnsensorer som er plassert ut i Bergen by. Vi jobber med GPS posisjon av
+                    sensorene på kartet, slik at du kan trykke deg inn å se hvor hver enkelt står.
+                    Sensorene er montert på husvegger og tak for unngå fasadeendringer slik at byen holder samme stil.
+                </p>
+                <p> Sensorene er montert for å kunne måle og registrere endringer i regnbør og CO2 utslipp i Bergen
+                    sentrum.
+                    Dette har vi gjort for at du som innbygger i Bergen sentrum skal bli informert om hvordan miljøet
+                    rundt deg er.
+                </p>
+                <p> Ettersom prosjektet er bærekraftig skal ikke sensorene være synlige med mindre man er ekstra
+                    observant.
+                    Vi benytter oss også av resirkulert elektronikk for å holde klimautslippet lavt, da sparer vi
+                    miljøet for ekstra utslipp og ressurser.
+                </p>
+            </article>
+            <section id="nyhetsholder">
+                <h2>Nyheter</h2>
+                <a>
+                    <img src="bilder/co2-sensor.png" alt="Regnsensor på tak" width="256px">
+                    <h3>8 nye C02-sensorer</h3>
+                </a>
+            </section>
+        </section>
     </section>
 </body>
 

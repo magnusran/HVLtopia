@@ -96,7 +96,6 @@ header {
     top: 90vh;
     width: 50%;
     position: absolute;
-    height: 1250px;
 }
 
 #innhold {
@@ -180,32 +179,33 @@ header {
     user-select: none;
 }
 
-.nyhetsholder {
+.statusholder {
     display: flex;
     flex-direction: row;
-    gap: 32px;
-
-    overflow-x: scroll;
+    gap: 24px;
     margin-top: 24px;
     margin-bottom: 48px;
+    align-items: stretch;
 }
 
-.nyhetsholder a {
+.statusholder a {
     background-color: rgb(171, 219, 170);
     border-radius: 32px;
     cursor: pointer;
-    width: 300px;
+    width: 1fr;
     display: flex;
+    flex: 1;
     flex-direction: column;
     border: solid 1px #0000006f;
 }
 
-.nyhetsholder img {
+.statusholder img {
     border-radius: 32px;
     box-shadow: inset 0px 0px 5px #000;
+    width: 100%;
 }
 
-.nyhetsholder h3 {
+.statusholder h3 {
     padding: 24px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -214,13 +214,14 @@ header {
 #blikjent-holder {
     align-self: center;
     display: grid;
-    width: 75%;
+    width: 50%;
+    padding-top: 32px;
+    padding-bottom: 32px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 16px;
-    grid-row-gap: 32px;
+    grid-row-gap: 16px;
     grid-template-areas:
-        ". . ."
         ". . ."
         ". . .";
 }
@@ -239,8 +240,8 @@ header {
     aspect-ratio: 1;
     box-shadow: 0px 12px 16px #00000075;
     object-fit: cover;
-    max-height: 100%;
-    width: 100%;
+    max-height: 85%;
+    width: 85%;
     border-radius: 100%;
 }
 
@@ -253,4 +254,35 @@ header {
     flex-direction: column;
     gap: 4px;
     align-items: center;
+}
+
+#info-nyheter-holder {
+    display: grid;
+    grid-template-columns: 2fr 0.75fr;
+    gap: 64px;
+}
+
+#nyhetsholder {
+    background-color: lightgrey;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#nyhetsholder h2 {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#nyhetsholder a {
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+#nyhetsholder img {
+    width: 64px;
 }
