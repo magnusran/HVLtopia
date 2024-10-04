@@ -5,68 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om oss</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" />
+    <link rel="preload" href="main.css" as="style">
+    <link rel="stylesheet" href="main.css" />
+
 </head>
 
 <body>
     <header>
-        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">=</label>
-        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
-        <ul id="navigasjon-linker">
-            <li><a href="./index.html"><u>Hjem</u></a></li>
-            <li><a href="./om-oss.html" class="her">Om oss</a></li>
-            <li><a href="./prosjekter.html">Prosjekter</a></li>
-            <li><a href="./vaar-visjon.html">Vår visjon</a></li>
-        </ul>
-        <img src="bilder/HVLtopia_Logo.svg" alt="Logo" width="150px">
         <div style="flex: 1;"></div>
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150px">
+        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+        </label>
+        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
+        <nav id="navigasjon-linker">
+            <ul>
+                <li><a href="./index.html">Hjem</a></li>
+                <li><a href="./om-oss.html" class="her">Om oss</a></li>
+                <li><a href="./prosjekter.html">Prosjekter</a></li>
+                <li><a href="./vaar-visjon.html">Vår visjon</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1 id="slagord" class="topptittel pacifico-regular">Om oss</h1>
-    <img id="bildebanner" src="bilder/forside_bakgrunn.webp" alt="Et bærekraftig Bergen" draggable="false">
-    <section class="hovedinnhold" id="innhold">
-        <h1>Bli kjent med oss</h1>
-        <p>Her ser du en oversikt over medlemmene på prosjektet HVLtopia! </p>
-        <p>Vi startet dette prosjektet på grunn av vi ønsket å sjekke utslipp i Bergen by.
-            Da vi bestemte oss for å starte dette prosjektet, satte vi ikke bare ut CO2 målere, men også andre
-            målestasjoner for å sjekke hvordan CO2 utslippet påvirker regnmengden i Bergen by.
-            Det viste seg å være vanskeligere å finne informasjon om klimaet i Bergen by enn vi hadde trodd.
-            Dette er en av grunnene til at vi startet prosjektet, nemmelig å gjøre det lettere for akkurat deg.
-            Vår hensikt er å gjøre deg mer oppmerksom på klimautslipp, og hvordan dette påvirker deg.
-        </p>
-        <section id="blikjent-holder">
+    <div class="overskrift">
+        <h1 id="slagord" class="pacifico-regular">Om oss</h1>
+    </div>
+    <main>
+        <section style="grid-column-end: span 2;">
+            <h1>Bli kjent med oss</h1>
+            <p>
+                Her ser du en oversikt over medlemmene på prosjektet HVLtopia!
+                <br><br>
+                Vi startet dette prosjektet på grunn av vi ønsket å sjekke utslipp i Bergen by.
+                Da vi bestemte oss for å starte dette prosjektet, satte vi ikke bare ut CO2 målere, men også andre
+                målestasjoner for å sjekke hvordan CO2 utslippet påvirker regnmengden i Bergen by.
+                <br><br>
+                Det viste seg å være vanskeligere å finne informasjon om klimaet i Bergen by enn vi hadde trodd.
+                Dette er en av grunnene til at vi startet prosjektet, nemmelig å gjøre det lettere for akkurat deg.
+                Vår hensikt er å gjøre deg mer oppmerksom på klimautslipp, og hvordan dette påvirker deg.
+            </p>
+        </section>
+        <section id="blikjent-holder" style="grid-column-end: span 1;">
             <a href="./folk/brage.html">
-                <img src="bilder/team/Brage.jpg" alt="Brage">
+                <img src="bilder/team/Brage.jpg" loading="lazy" alt="Brage">
                 <div>
                     <h2>Brage</h2>
                     <i>Prosjektmedlem</i>
                 </div>
             </a>
             <a href="./folk/kasper.html">
-                <img src="bilder/team/Kasper.png" alt="Kasper">
+                <img src="bilder/team/Kasper.png" loading="lazy" alt="Kasper">
                 <div>
                     <h2>Kasper</h2>
                     <i>SCRUM-Master</i>
                 </div>
             </a>
             <a href="./folk/magnus.html">
-                <img src="bilder/team/Magnus.png" alt="Magnus">
+                <img src="bilder/team/Magnus.png" loading="lazy" alt="Magnus">
                 <div>
                     <h2>Magnus</h2>
                     <i>Prosjektmedlem</i>
                 </div>
             </a>
             <a href="./folk/sander.html">
-                <img src="bilder/team/Sander.png" alt="Sander">
+                <img src="bilder/team/Sander.png" loading="lazy" alt="Sander">
                 <div>
                     <h2>Sander</h2>
                     <i>Prosjektmedlem</i>
                 </div>
             </a>
             <a href="./folk/andreas.html">
-                <img src="bilder/team/Andreas.jpg" alt="Andreas">
+                <img src="bilder/team/Andreas.jpg" loading="lazy" alt="Andreas">
                 <div>
                     <h2>Andreas</h2>
                     <i>Prosjektmedlem</i>
@@ -81,14 +92,64 @@
             </a>
 
         </section>
-        <h1>
-            Kontakt oss
-        </h1>
-        <a href="mailto:hvl@topia.no">hvl@topia.no</a>
-        <a href="Tel:47345678">+47 12345678</a>
+        <section>
+            <h1>
+                Kontakt oss
+            </h1>
+            <form action="" id="kontakt-form">
+                <label for="fnavn">Fornavn:</label>
+                <input type="text" id="fnavn" autocomplete="given-name">
 
-    </section>
+                <label for="enavn">Etternavn:</label>
+                <input type="text" id="enavn" autocomplete="family-name">
 
+                <label for="henvendelse">Henvendelse:</label>
+                <textarea name="henvendelse" id="henvendelse" maxlength="200"></textarea>
+                <input type="submit" value="Send">
+            </form>
+            <a href="mailto:hvl@topia.no">hvl@topia.no</a>
+            <a href="Tel:47345678">+47 12345678</a>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <section>
+                <h3>Sider</h3>
+                <ul>
+                    <li><a href="./index.html">Hjem</a></li>
+                    <li><a href="./om-oss.html">Om oss</a></li>
+                    <li><a href="./prosjekter.html">Prosjekter</a></li>
+                    <li><a href="./vaar-visjon.html">Vår visjon</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Lagd av</h3>
+                <ul>
+                    <li>Brage</li>
+                    <li>Kasper</li>
+                    <li>Magnus</li>
+                    <li>Sander</li>
+                    <li>Andreas</li>
+                    <li>Jørgen</li>
+                </ul>
+            </section>
+            <section style="grid-column-end: span 2;" class="social-media">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a>
+                    </li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
+
+
+                </ul>
+            </section>
+        </div>
+    </footer>
 </body>
 
 </html>

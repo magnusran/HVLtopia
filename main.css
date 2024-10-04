@@ -2,22 +2,67 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --bakgrunnsfarge: rgb(145, 198, 110);
+}
+
 body {
     margin: 0px;
-    background-color: lightgreen;
+    background-color: var(--bakgrunnsfarge);
 }
 
 h1 {
     margin: 0px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    margin: 0px;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(fonts/Pacifico-Regular.woff2) format('woff2');
+    font-display: swap;
 }
 
 /* Dette er stripa øverst på nettsida. */
 header {
-    display: flex;
+    position: absolute;
     width: 100%;
-    z-index: 99;
-    padding-left: 64px;
-    padding-right: 64px;
+    z-index: 9999;
+    height: 15rem;
+    box-sizing: border-box;
+    background-image:
+        linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255))
+}
+
+main {
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 8px 32px #000;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    top: 90vh;
+    width: 100%;
+    margin-top: -5rem;
     box-sizing: border-box;
 }
 
@@ -30,6 +75,7 @@ header {
     height: 100vh;
     object-fit: cover;
     object-position: 0px 0px;
+    mask-image: linear-gradient(to bottom, rgb(255, 255, 255), 95%, rgba(0, 0, 0, 0));
 }
 
 #bildebanner {
@@ -43,148 +89,142 @@ header {
     object-position: 0px 0px;
 }
 
+
+.button-pill {
+    background-color: rgb(168, 43, 43);
+    padding: 1rem;
+    border-radius: 2rem;
+    color: white;
+    border: 0.125rem solid #000;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #slagord-holder {
     width: 100%;
     display: flex;
-    height: 90vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0px;
     flex-direction: column;
 }
 
 #slagord-holder a {
-    background-color: rgb(168, 43, 43);
-    border: none;
-    padding: 16px;
-    border-radius: 50px;
-    color: white;
-    border: 2px solid #000;
-    cursor: pointer;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3rem;
 }
 
 #slagord {
     color: white;
-    text-shadow: 0px 0px 32px #000, 0px 0px 16px #000, 0px 0px 48px #000;
-    font-size: 5em;
+    text-shadow: 0px 0px 32px #000, 0px 0px 16px #000;
+    font-size: 4rem;
+    line-height: 6rem;
     text-align: center;
 }
 
+#slagord-liten {
+    color: white;
+    text-shadow: 0px 0px 32px #000, 0px 0px 16px #000;
+    font-size: 2rem;
+
+}
+
 .pacifico-regular {
-    font-family: "Pacifico", cursive;
+    font-family: Pacifico, cursive;
     font-weight: 400;
-    font-style: normal;
 }
 
-.hovedinnhold {
-    background-color: white;
-    border-radius: 32px;
-    box-shadow: 0px 8px 32px #000;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
 
-}
 
-#hovedside-innhold {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    top: 90vh;
-    width: 50%;
+#logo {
     position: absolute;
-}
-
-#innhold {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    top: 400px;
-    width: 50%;
-    position: absolute;
-}
-
-.hovedinnhold h1 {
-    margin: 0px;
-    font-size: xx-large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.hovedinnhold p {
-    font-size: larger;
-    font-family: Helvetica;
-    line-height: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 /* Dette er navigasjonsmenyen. */
 #navigasjon-sjekkboks {
     display: none;
+    width: 0;
+    height: 0;
 }
 
-#navigasjon-linker {
-    display: block;
-    background-color: white;
+nav {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.587);
+    backdrop-filter: blur(16px);
     font-family: Arial, Helvetica, sans-serif;
     color: black;
     position: absolute;
-    left: 0px;
-    top: 8px;
+    right: 0px;
     margin: 0px;
-    padding: 64px;
-    padding-top: 86px;
-    z-index: 200;
+    padding: 2.5rem;
+    padding-top: 5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 24px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    box-shadow: 0px 8px 16px #000000;
+}
+
+nav ul {
+    padding: 0px;
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    border-radius: 24px;
-    margin: 16px;
-    box-shadow: 0px 8px 16px #00000089;
+    gap: 1rem;
+}
+
+nav li {
     list-style-type: none;
+    padding: 0;
+    transition: transform 0.1s ease-in-out;
 }
 
-#navigasjon-sjekkboks:not(:checked)+#navigasjon-linker {
-    display: none;
+#navigasjon-sjekkboks:checked~nav {
+    display: block;
 }
 
-#navigasjon-linker a {
+nav li:hover {
+    transform: scale(1.125);
+}
+
+nav a {
     text-decoration: none;
-    font-size: xx-large;
+    font-size: 1.85rem;
     color: black;
-    transition: text-shadow, transform 0.1s ease-in-out;
     transform: scale(1);
-    display: inline-block;
     user-select: none;
 }
 
-#navigasjon-linker a.her {
+nav a.her {
     text-shadow: 0px 0px 16px #178d29, 0px 0px 16px #28c23f, 0px 0px 64px #21b343;
-}
-
-#navigasjon-linker a:hover {
-    transform: scale(1.125);
 }
 
 #navigasjon-knapp {
     display: block;
-    align-self: center;
     cursor: pointer;
     font-size: 5em;
     justify-self: left;
     flex: 1;
-    font-weight: 700;
     z-index: 9999;
     user-select: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
 }
 
 .statusholder {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-columns: 128px;
     flex-direction: row;
-    gap: 24px;
-    margin-top: 24px;
-    margin-bottom: 48px;
+    gap: 0.75rem;
+    margin-top: 1rem;
     align-items: stretch;
 }
 
@@ -214,16 +254,10 @@ header {
 #blikjent-holder {
     align-self: center;
     display: grid;
-    width: 50%;
-    padding-top: 32px;
-    padding-bottom: 32px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    grid-template-areas:
-        ". . ."
-        ". . .";
 }
 
 #blikjent-holder a {
@@ -234,19 +268,24 @@ header {
     text-decoration: none;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    transition: transform 0.15s ease-in-out;
+}
+
+#blikjent-holder a:hover {
+    transform: scale(1.1);
 }
 
 #blikjent-holder img {
     aspect-ratio: 1;
     box-shadow: 0px 12px 16px #00000075;
     object-fit: cover;
-    max-height: 85%;
     width: 85%;
     border-radius: 100%;
 }
 
 #blikjent-holder h2 {
     margin: 0px;
+    font-size: 1.25rem;
 }
 
 #blikjent-holder div {
@@ -254,12 +293,6 @@ header {
     flex-direction: column;
     gap: 4px;
     align-items: center;
-}
-
-#info-nyheter-holder {
-    display: grid;
-    grid-template-columns: 2fr 0.75fr;
-    gap: 64px;
 }
 
 #nyhetsholder {
@@ -271,26 +304,143 @@ header {
     border-radius: 24px;
 }
 
-#nyhetsholder h2 {
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 #nyhetsholder a {
     cursor: pointer;
     background-color: white;
     display: flex;
     flex-direction: row;
-    gap: 12px;
-    border-radius: 12px;
+    gap: 1rem;
+    border-radius: 0.75rem;
     overflow: hidden;
-    border: 1px solid grey;
+    border: 2px solid grey;
+    align-items: center;
+}
+
+#nyhetsholder h3 {
+    font-size: 1.25rem;
 }
 
 #nyhetsholder img {
-    width: 64px;
+    width: 5rem;
+    height: 5rem;
 }
 
 .topptittel {
-    margin-top: 48px;
+    margin-top: 3rem;
+}
+
+footer {
+    background-color: darkolivegreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+    margin-top: 4rem;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.social-media li {
+    list-style: none;
+}
+
+.social-media li img {
+    filter: invert();
+    width: 1.5rem;
+}
+
+.overskrift {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12.5rem;
+    background-image: linear-gradient(to bottom, rgba(144, 238, 144, 0), 90%, var(--bakgrunnsfarge)), url("bilder/forside_bakgrunn.webp");
+    background-size: cover;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#henvendelse {
+    height: 5rem;
+}
+
+#kontakt-form {
+    background-color: lightgrey;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#kontakt-form input {
+    border-radius: 500px;
+    border: 0;
+    padding: 0.5rem;
+}
+
+#kontakt-form textarea {
+    border: 0;
+    width: 100%;
+    border-radius: 1rem;
+    resize: none;
+    padding: 0.5rem;
+    height: 10rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#kontakt-form input[type="submit"]:hover {
+    background-color: grey;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2.5rem;
+        gap: 1.25rem;
+        width: clamp(65rem, 40%, 110rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .seksjon-full {
+        grid-column-end: span 3;
+    }
+
+    .seksjon-venstre-høyre {
+        grid-column-end: span 2;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 2.125rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }

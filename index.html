@@ -5,88 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HVLtopia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" fetchpriority="high" />
+    <link rel="preload" href="main.css" as="style">
+    <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
     <header>
-        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">=</label>
-        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
-        <ul id="navigasjon-linker">
-            <li><a href="./index.html" class="her"><u>Hjem</u></a></li>
-            <li><a href="./om-oss.html">Om oss</a></li>
-            <li><a href="./prosjekter.html">Prosjekter</a></li>
-            <li><a href="./vaar-visjon.html">Vår visjon</a></li>
-        </ul>
-        <img src="bilder/HVLtopia_Logo.svg" alt="Logo" width="150px">
         <div style="flex: 1;"></div>
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150px">
+        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+        </label>
+        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
+        <nav id="navigasjon-linker">
+            <ul>
+                <li><a href="./index.html" class="her">Hjem</a></li>
+                <li><a href="./om-oss.html">Om oss</a></li>
+                <li><a href="./prosjekter.html">Prosjekter</a></li>
+                <li><a href="./vaar-visjon.html">Vår visjon</a></li>
+            </ul>
+        </nav>
     </header>
     <div id="slagord-holder">
-        <h1 id="slagord" class="pacifico-regular">Velkommen til framtidens Bergen.</h1>
-        <a href="#informasjon">Lær mer</a>
+        <h2 id="slagord-liten" class="pacifico-regular">Velkommen til</h2>
+        <h1 id="slagord" class="pacifico-regular">Framtidens Bergen.</h1>
+        <a href="#informasjon" class="button-pill">Lær mer</a>
     </div>
-    <img id="forside-bakgrunn" src="bilder/forside_bakgrunn.webp" alt="Et bærekraftig Bergen" draggable="false">
+    <img id="forside-bakgrunn" fetchpriority="high" src="bilder/forside_bakgrunn.webp" alt="Et bærekraftig Bergen"
+        draggable="false">
 
-
-
-    <section class="hovedinnhold" id="hovedside-innhold">
-        <h1>Prosjektstatus</h1>
-        <div class="statusholder">
-            <a>
-                <img src="bilder/regnsensor.webp" alt="Regnsensor på tak" width="256px">
-                <h3>Regnsensorer aktive</h3>
-            </a>
-            <a>
-                <img src="bilder/co2-sensor.png" alt="CO2-sensor på vegg" width="256px">
-                <h3>CO2-sensorer aktive</h3>
-            </a>
-            <a>
-                <img src="https://placehold.co/256x256" alt="Regnsensor på tak" width="256px">
-                <h3>TODO</h3>
-            </a>
-            <a>
-                <img src="https://placehold.co/256x256" alt="Regnsensor på tak" width="256px">
-                <h3>TODO</h3>
-            </a>
-            <a>
-                <img src="https://placehold.co/256x256" alt="Regnsensor på tak" width="256px">
-                <h3>TODO</h3>
-            </a>
-        </div>
-        <section id="info-nyheter-holder">
+    <main>
+        <section class="seksjon-venstre-høyre">
             <article>
                 <h1 id="informasjon">Informasjon om oppdateringer</h1>
-                <p> Ovenfor ser du våre regnsensorer som er plassert ut i Bergen by. Vi jobber med GPS posisjon av
+                <p>
+                    Ovenfor ser du våre regnsensorer som er plassert ut i Bergen by. Vi jobber med GPS posisjon av
                     sensorene på kartet, slik at du kan trykke deg inn å se hvor hver enkelt står.
+                    <br>
+                    <br>
                     Sensorene er montert på husvegger og tak for unngå fasadeendringer slik at byen holder samme stil.
-                </p>
-                <p> Sensorene er montert for å kunne måle og registrere endringer i regnbør og CO2 utslipp i Bergen
+                    Sensorene er montert for å kunne måle og registrere endringer i regnbør og CO2 utslipp i Bergen
                     sentrum.
                     Dette har vi gjort for at du som innbygger i Bergen sentrum skal bli informert om hvordan miljøet
                     rundt deg er.
-                </p>
-                <p> Ettersom prosjektet er bærekraftig skal ikke sensorene være synlige med mindre man er ekstra
+                    <br>
+                    <br>
+                    Ettersom prosjektet er bærekraftig skal ikke sensorene være synlige med mindre man er ekstra
                     observant.
                     Vi benytter oss også av resirkulert elektronikk for å holde klimautslippet lavt, da sparer vi
                     miljøet for ekstra utslipp og ressurser.
                 </p>
             </article>
-            <section id="nyhetsholder">
-                <h2>Nyheter</h2>
-                <a>
-                    <img src="bilder/co2-sensor.png" alt="CO2-sensorer på tak" width="256px">
-                    <h3>8 nye C02-sensorer</h3>
-                </a>
-                <a>
-                    <img src="bilder/regnsensor.webp" alt="Regnsensor på tak" width="256px">
-                    <h3>3 nye regnsesnorer</h3>
-                </a>
-            </section>
+            <h1>Prosjektstatus</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id vitae ea deserunt quibusdam officiis natus!
+                Iste voluptatibus enim inventore cumque odio harum itaque, sint iure aspernatur quas libero dolore vero
+                deserunt doloremque exercitationem odit omnis voluptatem rem eligendi ducimus natus ullam quidem totam.
+                Error provident quaerat veniam a? Natus, fuga.
+            </p>
         </section>
-    </section>
+        <section id="nyhetsholder">
+            <h2>Nyheter</h2>
+            <a>
+                <img src="bilder/co2-sensor.webp" loading="lazy" alt="CO2-sensorer på tak" width="256px">
+                <h3>8 nye C02-sensorer</h3>
+            </a>
+            <a>
+                <img src="bilder/regnsensor.webp" loading="lazy" alt="Regnsensor på tak" width="256px">
+                <h3>3 nye regnsesnorer</h3>
+            </a>
+            <a>
+                <img src="bilder/regnsensor.webp" loading="lazy" alt="Regnsensor på tak" width="256px">
+                <h3>3 nye regnsesnorer</h3>
+            </a>
+            <a>
+                <img src="bilder/regnsensor.webp" loading="lazy" alt="Regnsensor på tak" width="256px">
+                <h3>3 nye regnsesnorer</h3>
+            </a>
+
+
+        </section>
+        <section class="seksjon-full">
+            <h2>Status</h2>
+            <div class="statusholder">
+                <a>
+                    <img src="bilder/regnsensor.webp" loading="lazy" alt="Regnsensor på tak" width="256px">
+                    <h3>Regnsensorer aktive</h3>
+                </a>
+                <a>
+                    <img src="bilder/co2-sensor.webp" loading="lazy" alt="CO2-sensor på vegg" width="256px">
+                    <h3>CO2-sensorer aktive</h3>
+                </a>
+                <a>
+                    <img src="https://placehold.co/256x256" loading="lazy" alt="Regnsensor på tak" width="256px">
+                    <h3>TODO</h3>
+                </a>
+                <a>
+                    <img src="https://placehold.co/256x256" loading="lazy" alt="Regnsensor på tak" width="256px">
+                    <h3>TODO</h3>
+                </a>
+                <a>
+                    <img src="https://placehold.co/256x256" loading="lazy" alt="Regnsensor på tak" width="256px">
+                    <h3>TODO</h3>
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <section>
+                <h3>Sider</h3>
+                <ul>
+                    <li><a href="./index.html">Hjem</a></li>
+                    <li><a href="./om-oss.html">Om oss</a></li>
+                    <li><a href="./prosjekter.html">Prosjekter</a></li>
+                    <li><a href="./vaar-visjon.html">Vår visjon</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Lagd av</h3>
+                <ul>
+                    <li>Brage</li>
+                    <li>Kasper</li>
+                    <li>Magnus</li>
+                    <li>Sander</li>
+                    <li>Andreas</li>
+                    <li>Jørgen</li>
+                </ul>
+            </section>
+            <section style="grid-column-end: span 2;" class="social-media">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a>
+                    </li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
+
+
+                </ul>
+            </section>
+        </div>
+    </footer>
 </body>
 
 </html>

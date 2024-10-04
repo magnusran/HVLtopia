@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nb">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,76 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">=</label>
-        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
-        <ul id="navigasjon-linker">
-            <li><a href="./index.html" ><u>Hjem</u></a></li>
-            <li><a href="./om-oss.html">Om oss</a></li>
-            <li><a href="./prosjekter.html">Prosjekter</a></li>
-            <li><a href="./vaar-visjon.html" class="her">Vår visjon</a></li>
-        </ul>
-        <img src="bilder/HVLtopia_Logo.svg" alt="Logo" width="150px">
         <div style="flex: 1;"></div>
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150px">
+        <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+        </label>
+        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
+        <nav id="navigasjon-linker">
+            <ul>
+                <li><a href="./index.html">Hjem</a></li>
+                <li><a href="./om-oss.html">Om oss</a></li>
+                <li><a href="./prosjekter.html">Prosjekter</a></li>
+                <li><a href="./vaar-visjon.html" class="her">Vår visjon</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1 id="slagord" class="topptittel pacifico-regular">Vår visjon</h1>
-    <img id="bildebanner" src="bilder/forside_bakgrunn.webp" alt="Et bærekraftig Bergen" draggable="false">
-    <section class="hovedinnhold" id="innhold">
-    <h1>Vår visjon</h1>
-    <p>
-        HVLtopia er prosjektet som jobber for utbygging av fremtidsbyen Bergen. Vi vil bygge en by med fokus på
-        <strong>tilgjengelighet, bærekraftighet, miljøsamvittighet og effektivitet</strong>. Videre så har det vært
-        viktig at
-        målingene er lett tilgjengelig for fellesskapet. Grunnen til dette er fordi HVLtopia har troen på
-        samarbeidet mellom bedrifter, dette for å kunne løse samfunnets problemer
-    </p>
+    <div class="overskrift">
+        <h1 id="slagord" class="pacifico-regular">Vår visjon</h1>
+    </div>
+    <main>
+        <section style="grid-column-end: span 3;">
+            <h1>Vår visjon</h1>
+            <p>
+                HVLtopia er prosjektet som jobber for utbygging av fremtidsbyen Bergen. Vi vil bygge en by med fokus på
+                <strong>tilgjengelighet, bærekraftighet, miljøsamvittighet og effektivitet</strong>. Videre så har det vært
+                viktig at
+                målingene er lett tilgjengelig for fellesskapet. Grunnen til dette er fordi HVLtopia har troen på
+                samarbeidet mellom bedrifter, dette for å kunne løse samfunnets problemer
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <section>
+                <h3>Sider</h3>
+                <ul>
+                    <li><a href="./index.html">Hjem</a></li>
+                    <li><a href="./om-oss.html">Om oss</a></li>
+                    <li><a href="./prosjekter.html">Prosjekter</a></li>
+                    <li><a href="./vaar-visjon.html">Vår visjon</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Lagd av</h3>
+                <ul>
+                    <li>Brage</li>
+                    <li>Kasper</li>
+                    <li>Magnus</li>
+                    <li>Sander</li>
+                    <li>Andreas</li>
+                    <li>Jørgen</li>
+                </ul>
+            </section>
+            <section style="grid-column-end: span 2;" class="social-media">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a></li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
 
+
+                </ul>
+            </section>
+        </div>
+    </footer>
 </body>
+
 </html>
