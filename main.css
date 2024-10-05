@@ -258,9 +258,9 @@ nav a.her {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 30%;
-    grid-row-gap: 10%;
-    height: 150%;
+    padding: 6rem;
+    grid-column-gap: 10rem;
+    grid-row-gap: 1rem;
 }
 
 #blikjent-holder a {
