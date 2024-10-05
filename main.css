@@ -318,6 +318,8 @@ nav a.her {
     overflow: hidden;
     border: 2px solid grey;
     align-items: center;
+    color: black;
+    text-decoration: none;
 }
 
 #nyhetsholder h3 {
