@@ -3,7 +3,7 @@ html {
 }
 
 :root {
-    --bakgrunnsfarge: rgb(145, 198, 110);
+    --bakgrunnsfarge: rgb(102, 133, 102);
 }
 
 body {
@@ -229,7 +229,7 @@ nav a.her {
 }
 
 .statusholder a {
-    background-color: rgb(171, 219, 170);
+    background-color: rgb(168, 232, 156);
     border-radius: 32px;
     cursor: pointer;
     width: 1fr;
@@ -330,7 +330,7 @@ nav a.her {
 }
 
 footer {
-    background-color: darkolivegreen;
+    background-color: rgb(40, 37, 37);
     color: white;
     display: flex;
     justify-content: center;
