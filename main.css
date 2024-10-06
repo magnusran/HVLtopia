@@ -486,3 +486,15 @@ footer div {
         font-size: 1rem;
     }
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+    gap: 10px; /* Mellomrom mellom bilder */
+    max-width: 600px; /* Tilpass bredden på grid-beholderen */
+    margin: 0 auto; /* Sentere containeren */
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto; /* Behold bildenes proporsjoner */
+}
