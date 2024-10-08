@@ -10,7 +10,7 @@ div {
     height: 100vh;
 }
 article {
-    width: 40vw;
+    width: 50vw;
     height: 40vw;
     display: flex;
     flex-direction: column;
@@ -38,4 +38,10 @@ html {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+p{
+    text-align: center;
+}
+h2{
+    text-align: center;
 }
