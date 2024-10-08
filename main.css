@@ -255,15 +255,17 @@ nav a.her {
 
 #blikjent-holder {
     align-self: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 6rem;
-    grid-column-gap: 10rem;
-    grid-row-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 #blikjent-holder a {
+    flex: 0 0 calc(33.333% - 2rem);
     display: flex;
     gap: 16px;
     flex-direction: column;
@@ -283,7 +285,7 @@ nav a.her {
     aspect-ratio: 1;
     box-shadow: 0px 12px 16px #00000075;
     object-fit: cover;
-    width: 130%;
+    width: 100%;
     border-radius: 100%;
 }
 
@@ -378,6 +380,14 @@ footer div {
 
 #henvendelse {
     height: 5rem;
+}
+
+.kontakt-rad {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 #kontakt-form {
