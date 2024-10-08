@@ -499,3 +499,7 @@ footer div {
     height: auto; /* Behold bildenes proporsjoner */
 }
 
+video{
+    height: 200px;
+    width: 300px;
+}
