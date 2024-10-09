@@ -4,7 +4,7 @@ html {
 
 :root {
     --bakgrunnsfarge: rgb(102, 133, 102);
-    --mørk-tekstfarge: rgb(34, 83, 34);
+    --mørk-tekstfarge: rgb(255, 255, 255);
 }
 
 @font-face {
@@ -263,7 +263,7 @@ nav a.her {
 }
 
 .statusholder a {
-    background-color: rgb(168, 232, 156);
+    background-color: rgb(40, 37, 37);
     color: var(--mørk-tekstfarge);
     border-radius: 32px;
     cursor: pointer;
