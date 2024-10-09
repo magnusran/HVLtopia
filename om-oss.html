@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss</title>
-    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" >
+    <title>HVLtopia</title>
+    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" fetchpriority="high">
     <link rel="preload" href="main.css" as="style">
-    <link rel="stylesheet" href="main.css" >
-
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/bilder/ikoner/HVLtopia_Logo.svg">
 </head>
 
 <body>
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="148" height="148">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
-            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="burger">
         </label>
         <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
         <nav id="navigasjon-linker">
             <ul>
-                <li><a href="./index.html">Hjem</a></li>
-                <li><a href="./om-oss.html" class="her">Om oss</a></li>
+                <li><a href="./index.html" class="her">Hjem</a></li>
+                <li><a href="./om-oss.html">Om oss</a></li>
                 <li><a href="./prosjekter.html">Prosjekter</a></li>
                 <li><a href="./vaar-visjon.html">Vår visjon</a></li>
                 <li><a href="./galleri.html">Galleri</a></li>
@@ -35,38 +36,44 @@
         <h1 id="slagord" class="pacifico-regular">Om oss</h1>
     </div>
     <main>
-        <section style="grid-column-end: span 2;">
-            <h2>Bli kjent med oss</h2>
-            <p>
-                Her ser du en oversikt over medlemmene på prosjektet HVLtopia!
-                <br><br>
-                Vi startet dette prosjektet på grunn av vi ønsket å sjekke utslipp i Bergen by.
-                Da vi bestemte oss for å starte dette prosjektet, satte vi ikke bare ut CO2 målere, men også andre
-                målestasjoner for å sjekke hvordan CO2 utslippet påvirker regnmengden i Bergen by.
-                <br><br>
-                Det viste seg å være vanskeligere å finne informasjon om klimaet i Bergen by enn vi hadde trodd.
-                Dette er en av grunnene til at vi startet prosjektet, nemmelig å gjøre det lettere for akkurat deg.
-                Vår hensikt er å gjøre deg mer oppmerksom på klimautslipp, og hvordan dette påvirker deg.
-            </p>
-            <h2>Send oss en epost eller ring oss!</h2>
-          
-            <div class="kontakt-rad">
-                <img src="bilder/mail.jpg" alt="Bilde av logo til mail" height="32" width="32"><span class="tittel"><a href="mailto:hvl@topia.no">hvl@topia.no</a>  </span>
-            </div>
-            <div class="kontakt-rad">
-                <img src="bilder/Phone.jpg" alt="Bilde av telefon logo" height="32" width="32"><span class="tittel"><a href="Tel:47345678">+47 12345678</a></span>
-            </div>
-            <div class="kontakt-rad">
-                <img src="bilder/pin.jpg" alt="Bilde av kart logo" height="32" width="32"><span class="tittel">Inndalsveien 28, 5063 Bergen</span>
-            </div>
+        <div style="grid-column-end: span 2;" id="seksjon">
+            <section>
+                <h2>Bli kjent med oss</h2>
+                <p>
+                    Her ser du en oversikt over medlemmene på prosjektet HVLtopia!
+                    <br><br>
+                    Vi startet dette prosjektet fordi vi ønsket å sjekke utslipp i Bergen by.
+                    Da vi bestemte oss for å starte dette prosjektet, satte vi ikke bare ut CO2 målere, men også andre
+                    målestasjoner for å blant annet sjekke hvordan CO2 utslippet påvirker regnmengden -og kvaliteten i
+                    Bergen by.
+                    <br><br>
+                    Det viste seg å være vanskeligere å finne informasjon om klimaet i Bergen by enn vi hadde trodd.
+                    Dette er en av grunnene til at vi startet prosjektet, nemmelig å gjøre det lettere for akkurat deg.
+                    Vår hensikt er å gjøre deg mer oppmerksom på klimautslipp, og hvordan dette påvirker deg.
+                </p>
+            </section>
+            <section>
+                <h2>Ta kontakt</h2>
+                <div class="kontaktholder">
+                    <div>
+                        <img src="bilder/ikoner/mail.svg" alt="mailikon" height="32" width="32"><span class="tittel"><a
+                                href="mailto:hvl@topia.no">hvl@topia.no</a> </span>
+                    </div>
+                    <div>
+                        <img src="bilder/ikoner/telefon.svg" alt="telefonikon" height="32" width="32"><span
+                            class="tittel"><a href="Tel:47345678">+47 12345678</a></span>
+                    </div>
+                    <div>
+                        <img src="bilder/ikoner/sted.svg" alt="stedikon" height="32" width="32"><span
+                            class="tittel">Inndalsveien 28, 5063 Bergen</span>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-
-        
-        </section>
-    
         <section>
             <h2>
-                Kontakt skjema
+                Kontaktskjema
             </h2>
             <form action="kontakt" id="kontakt-form">
                 <label for="fnavn">Fornavn:</label>
@@ -79,10 +86,11 @@
                 <input type="text" id="mail" autocomplete="email" placeholder="eksempel@mail.com">
 
                 <label for="henvendelse">Henvendelse:</label>
-                <textarea name="henvendelse" id="henvendelse" maxlength="200" placeholder="Jeg ønsker å inngå et samarbeid fordi....."></textarea>
+                <textarea name="henvendelse" id="henvendelse" maxlength="200"
+                    placeholder="Jeg ønsker å inngå et samarbeid fordi....."></textarea>
                 <input type="submit" value="Send">
             </form>
-   
+
         </section>
         <section id="blikjent-holder" style="grid-column-end: span 3;">
             <a href="./folk/brage.html">
@@ -150,13 +158,18 @@
             <div style="grid-column-end: span 2;" class="social-media">
                 <ul>
                     <li>
-                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
-                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
-                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube" width="24"
+                                height="24"></a></li>
                 </ul>
             </div>
             <section style="text-align: center; grid-column-end: span 2;">

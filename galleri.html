@@ -4,28 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleri</title>
+    <title>HVLtopia</title>
+    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="main.css" as="style">
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/bilder/ikoner/HVLtopia_Logo.svg">
 </head>
-
 <body>
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="148" height="148">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
-            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="burger">
         </label>
         <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
         <nav id="navigasjon-linker">
             <ul>
-                <li><a href="./index.html">Hjem</a></li>
+                <li><a href="./index.html" class="her">Hjem</a></li>
                 <li><a href="./om-oss.html">Om oss</a></li>
                 <li><a href="./prosjekter.html">Prosjekter</a></li>
                 <li><a href="./vaar-visjon.html">Vår visjon</a></li>
-                <li><a href="./galleri.html" class="her"> Galleri</a></li>
+                <li><a href="./galleri.html">Galleri</a></li>
                 <li><a href="./fremtiden.html">Fremtiden</a></li>
             </ul>
         </nav>
@@ -35,12 +36,10 @@
     </div>
     <main>
         <section style="grid-column-end: span 3;">
-            <h3>Nedenfor ser du en video som presenterer noe av arbeidet vårt i Bergen by</h3>
-                <video autoplay loop muted>
-                    <source src="Videoer/Rickroll.mp4" type="video/mp4">
-                  </video>
-    
-
+            <h2>Video av arbeidet vårt i Bergen</h2>
+            <video autoplay loop muted>
+                <source src="video.mp4" type="video/mp4">
+            </video>
         </section>
     </main>
     <footer>
@@ -70,13 +69,18 @@
             <div style="grid-column-end: span 2;" class="social-media">
                 <ul>
                     <li>
-                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
-                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
-                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube" width="24"
+                                height="24"></a></li>
                 </ul>
             </div>
             <section style="text-align: center; grid-column-end: span 2;">

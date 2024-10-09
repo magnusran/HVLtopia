@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosjekter</title>
-    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" >
+    <title>HVLtopia</title>
+    <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" fetchpriority="high">
     <link rel="preload" href="main.css" as="style">
-    <link rel="stylesheet" href="main.css" >
-
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/bilder/ikoner/HVLtopia_Logo.svg">
 </head>
 
 <body>
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="148" height="148">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
-            <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="burger">
         </label>
         <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
         <nav id="navigasjon-linker">
             <ul>
-                <li><a href="./index.html">Hjem</a></li>
+                <li><a href="./index.html" class="her">Hjem</a></li>
                 <li><a href="./om-oss.html">Om oss</a></li>
-                <li><a href="./prosjekter.html" class="her">Prosjekter</a></li>
+                <li><a href="./prosjekter.html">Prosjekter</a></li>
                 <li><a href="./vaar-visjon.html">Vår visjon</a></li>
                 <li><a href="./galleri.html">Galleri</a></li>
                 <li><a href="./fremtiden.html">Fremtiden</a></li>
@@ -36,18 +37,23 @@
     </div>
     <main>
         <section style="grid-column-end: span 3;">
-            <h3>Prosjekter</h3>
+            <h2>Introduksjon</h2>
             <p>
-               Ved hjelp av gps brikker og internett gir sensorene mulighet for flere og bedre målinger. Dette forbedrer både livskvaliteten for innbyggerne og dyrelivet. 
-               Fra å overvåke værforhold og vannstand til å analysere støynivå, spiller sensorer en sentral rolle i å gjøre Bergen til en mer teknologisk avansert og miljøvennlig by.
-               Nedenfor ser du et omfattende utvalg av sensorer som er montert i Bergen. 
-               <br>Trykk på hver enkelt for å lese mer!
+                Ved hjelp av GPS-brikker og internett gir sensorene mulighet for flere, bedre og oftere målinger. Dette
+                forbedrer både livskvaliteten for innbyggerne og dyrelivet, for tiltak kan tas tidligere.
+                Fra å overvåke værforhold og vannkvalitet til å analysere støynivå og luftforurensning, spiller
+                sensorene våre en sentral rolle i å
+                gjøre Bergen til en mer teknologisk avansert og miljøvennlig by.
+                Nedenfor ser du et omfattende utvalg av sensorer vi har montert i Bergen.
+                <br>Trykk på hver enkelt for å lese mer!
             </p>
-
+        </section>
+        <section style="grid-column-end: span 3;">
+            <h2>Om sensorene</h2>
             <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                 <div class="kollapsibel">
                     <label for="co2-sensor-toggle">
-                       CO2-sensor
+                        CO2-sensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="co2-sensor-toggle" class="kollapsibel-sjekkboks">
@@ -87,7 +93,7 @@
                                 i vann. Ferksvann blir også surere, som påvirker hele økosystemet.
                             </p>
                         </section>
-                        <img src="bilder/regnsensor.webp" alt="regnsensor" style="width: 100%;" >
+                        <img src="bilder/regnsensor.webp" alt="regnsensor" style="width: 100%;">
                     </div>
                 </div>
                 <div class="kollapsibel">
@@ -109,7 +115,7 @@
                                 gjennomsnittstemperaturer over flere år med CO2-nivået.
                             </p>
                         </section>
-                        <img src="bilder/tempsensor.webp" alt="temperatursensor" style="width: 100%;" >
+                        <img src="bilder/tempsensor.webp" alt="temperatursensor" style="width: 100%;">
                     </div>
                 </div>
                 <div class="kollapsibel">
@@ -131,12 +137,12 @@
                                 Sensorene våre hjelper oss med å lokalisere forbedringsområder.
                             </p>
                         </section>
-                        <img src="bilder/Stoysensor.webp" alt="støysensor" style="width: 100%;" >
+                        <img src="bilder/Stoysensor.webp" alt="støysensor" style="width: 100%;">
                     </div>
                 </div>
                 <div class="kollapsibel">
                     <label for="vannsensor-toggle">
-                       Vannkvalitetssensor
+                        Vannkvalitetssensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="vannsensor-toggle" class="kollapsibel-sjekkboks">
@@ -158,14 +164,14 @@
             </div>
         </section>
         <section style="grid-column-end: span 3;">
-            <h3>
-                <i>Bærekraft og samfunnsansvar</i>
-            </h3>
+            <h2>
+                Bærekraft og samfunnsansvar
+            </h2>
             <p>
-               <i> Vi i HVLtopia mener at alle har et sammfunnsansvar om å være bærekraftige, slik at de kommende
+                Vi i HVLtopia mener at alle har et samfunnsansvar om å være bærekraftige, slik at de kommende
                 generasjonene kan nyte den samme naturen og godene som vi gjør nå. Alle sensorene våre er lagd av
-                resirkulerte materialer som ikke skader naturen de er installert i. Sensorene våre er også installert
-                kamuflert.</i>
+                resirkulerte materialer som ikke skader naturen de er installert i. Sensorene våre er også
+                installert så diskré som mulig for å ikke være forstyrrende.
             </p>
         </section>
     </main>
@@ -197,13 +203,18 @@
             <div style="grid-column-end: span 2;" class="social-media">
                 <ul>
                     <li>
-                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"></a>
+                    <li><a href="https://www.facebook.com/"><img src="bilder/ikoner/facebook.svg" alt="Facebook"
+                                width="24" height="24"></a>
                     </li>
-                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok"></a></li>
-                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
-                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/"><img src="bilder/ikoner/tiktok.svg" alt="tiktok" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X" width="24"
+                                height="24"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube" width="24"
+                                height="24"></a></li>
                 </ul>
             </div>
             <section style="text-align: center; grid-column-end: span 2;">
