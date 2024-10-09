@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prosjekter</title>
     <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" />
+    <link rel="preload" href="bilder/forside_bakgrunn.webp" as="image" >
     <link rel="preload" href="main.css" as="style">
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css" >
 
 </head>
 
 <body>
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150px">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="150">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
             <img src="bilder/ikoner/burger_meny.svg" width="48" alt="">
         </label>
@@ -36,7 +36,7 @@
     </div>
     <main>
         <section style="grid-column-end: span 3;">
-            <h1>Prosjekter</h1>
+            <h3>Prosjekter</h3>
             <p>
                Ved hjelp av gps brikker og internett gir sensorene mulighet for flere og bedre målinger. Dette forbedrer både livskvaliteten for innbyggerne og dyrelivet. 
                Fra å overvåke værforhold og vannstand til å analysere støynivå, spiller sensorer en sentral rolle i å gjøre Bergen til en mer teknologisk avansert og miljøvennlig by.
@@ -44,10 +44,10 @@
                <br>Trykk på hver enkelt for å lese mer!
             </p>
 
-            <section style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <article class="kollapsibel">
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div class="kollapsibel">
                     <label for="co2-sensor-toggle">
-                        <h3>CO2-sensor</h3>
+                       CO2-sensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="co2-sensor-toggle" class="kollapsibel-sjekkboks">
@@ -65,12 +65,12 @@
                                 lufta kan blant annet gi hodepine og nedsatt kognitiv funksjon.
                             </p>
                         </section>
-                        <img src="bilder/co2-sensor.webp" width="100%" alt="co2-sensor">
+                        <img src="bilder/co2-sensor.webp" alt="co2-sensor" style="width: 100%;">
                     </div>
-                </article>
-                <article class="kollapsibel">
+                </div>
+                <div class="kollapsibel">
                     <label for="regnsensor-toggle">
-                        <h3>Regnsensor</h3>
+                        Regnsensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="regnsensor-toggle" class="kollapsibel-sjekkboks">
@@ -87,12 +87,12 @@
                                 i vann. Ferksvann blir også surere, som påvirker hele økosystemet.
                             </p>
                         </section>
-                        <img src="bilder/regnsensor.webp" width="100%" alt="regnsensor">
+                        <img src="bilder/regnsensor.webp" alt="regnsensor" style="width: 100%;" >
                     </div>
-                </article>
-                <article class="kollapsibel">
+                </div>
+                <div class="kollapsibel">
                     <label for="tempsensor-toggle">
-                        <h3>Temperatursensor</h3>
+                        Temperatursensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="tempsensor-toggle" class="kollapsibel-sjekkboks">
@@ -109,12 +109,12 @@
                                 gjennomsnittstemperaturer over flere år med CO2-nivået.
                             </p>
                         </section>
-                        <img src="bilder/tempsensor.jpg" width="100%" alt="temperatursensor">
+                        <img src="bilder/tempsensor.jpg" alt="temperatursensor" style="width: 100%;" >
                     </div>
-                </article>
-                <article class="kollapsibel">
+                </div>
+                <div class="kollapsibel">
                     <label for="stoysensor-toggle">
-                        <h3>Støysensor</h3>
+                        Støysensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="stoysensor-toggle" class="kollapsibel-sjekkboks">
@@ -131,12 +131,12 @@
                                 Sensorene våre hjelper oss med å lokalisere forbedringsområder.
                             </p>
                         </section>
-                        <img src="bilder/Stoysensor.webp" width="100%" alt="støysensor">
+                        <img src="bilder/Stoysensor.webp" alt="støysensor" style="width: 100%;" >
                     </div>
-                </article>
-                <article class="kollapsibel">
+                </div>
+                <div class="kollapsibel">
                     <label for="vannsensor-toggle">
-                        <h3>Vannkvalitetssensor</h3>
+                       Vannkvalitetssensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
                     <input type="checkbox" id="vannsensor-toggle" class="kollapsibel-sjekkboks">
@@ -152,10 +152,10 @@
                                 derfor har vi vannkvalitetssensorer som kontinuerlig overvåker forurensingen i vannet.
                             </p>
                         </section>
-                        <img src="bilder/Vannsensor.jpg" width="100%" alt="vannkvalitetssensor">
+                        <img src="bilder/Vannsensor.jpg" alt="vannkvalitetssensor" style="width: 100%;">
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
         </section>
         <section style="grid-column-end: span 3;">
             <h3>
@@ -193,7 +193,7 @@
                     <li>Jørgen</li>
                 </ul>
             </section>
-            <section style="grid-column-end: span 2;" class="social-media">
+            <div style="grid-column-end: span 2;" class="social-media">
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/"><img src="bilder/ikoner/instagram.svg" alt="Instagram"></a>
@@ -204,7 +204,7 @@
                     <li><a href="https://www.x.com/"><img src="bilder/ikoner/twitter-x.svg" alt="X"></a></li>
                     <li><a href="https://www.youtube.com/"><img src="bilder/ikoner/youtube.svg" alt="YouTube"></a></li>
                 </ul>
-            </section>
+            </div>
         </div>
     </footer>
 </body>
