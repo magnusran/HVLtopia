@@ -92,7 +92,7 @@
                 </p>
             </section>
         </div>
-        <section id="nyhetsholder" tabindex="0">
+        <section id="nyhetsholder">
             <h2>Nyheter</h2>
             <ul>
                 <li>
@@ -129,36 +129,36 @@
         </section>
         <section class="seksjon-full" style="padding-left:0; padding-right: 0;">
             <h2 id="sensorstatus-tittel">Sensorstatus</h2>
-            <ul class="statusholder" tabindex="0">
+            <ul class="statusholder">
                 <li>
-                    <a onclick='sensorStatusKlikk("Regnsensorer status")'>
+                    <button onclick='sensorStatusKlikk("Regnsensorer status")'  tabindex="0">
                         <img src="bilder/regnsensor.webp" loading="lazy" alt="regnsensor">
                         <p class="sensor-status-aktiv">Regn (8/8)</p>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a onclick='sensorStatusKlikk("CO2-sensorer status")'>
+                    <button onclick='sensorStatusKlikk("CO2-sensorer status")'  tabindex="0">
                         <img src="bilder/co2-sensor.webp" loading="lazy" alt="co2-sensor">
                         <p class="sensor-status-aktiv">CO2 (20/20)</p>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a onclick='sensorStatusKlikk("Temperatursensorer status")'>
+                    <button onclick='sensorStatusKlikk("Temperatursensorer status")'  tabindex="0">
                         <img src="bilder/tempsensor.webp" loading="lazy" alt="temperatursensor">
                         <p class="sensor-status-problem">Temperatur (8/10)</p>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a onclick='sensorStatusKlikk("Styøsensorer status")'>
+                    <button onclick='sensorStatusKlikk("Styøsensorer status")'  tabindex="0">
                         <img src="bilder/Stoysensor.webp" loading="lazy" alt="støysensor">
                         <p class="sensor-status-aktiv">Støy (15/15)</p>
-                    </a>
+                    </button>
                 </li>
                 <li>
-                    <a onclick='sensorStatusKlikk("Vannkvalitetssensorer status")'>
+                    <button onclick='sensorStatusKlikk("Vannkvalitetssensorer status")'  tabindex="0">
                         <img src="bilder/vannsensor.webp" loading="lazy" alt="vannkvalitetssensor">
                         <p class="sensor-status-inaktiv">Vann (0/7)</p>
-                    </a>
+                    </button>
                 </li>
             </ul>
         </section>

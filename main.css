@@ -317,9 +317,11 @@ nav a.her {
     margin-top: 1rem;
     align-items: stretch;
     overflow-x: scroll;
+    list-style: none;
+    padding: 0;
 }
 
-.statusholder a {
+.statusholder button {
     background-color: rgb(40, 37, 37);
     box-sizing: border-box;
     color: var(--mørk-tekstfarge);
@@ -329,6 +331,11 @@ nav a.her {
     flex-direction: column;
     justify-content: space-between;
     border: solid 1px #0000006f;
+    width: 100%;
+}
+
+.statusholder:focus {
+    border: 3px grey solid;
 }
 
 .statusholder img {
@@ -424,6 +431,11 @@ nav a.her {
     gap: 0.75rem;
     border-radius: 24px;
     height: fit-content;
+}
+
+#nyhetsholder ul {
+    list-style: none;
+    padding: 0;
 }
 
 #nyhetsholder h2 {
