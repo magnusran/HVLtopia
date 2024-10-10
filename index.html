@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="/bilder/ikoner/HVLtopia_Logo.svg">
 </head>
+
 <body>
     <dialog id="status-vindu">
         <section>
-            <h1 id="status-vindu-tittel"></h1>
+            <h2 id="status-vindu-tittel">Sensornavn</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7885.618565949456!2d5.31966539417044!3d60.388994304765006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cfea43b3317d3%3A0x583d19ca7af47f9!2sSentrum%2C%20Bergen!5e0!3m2!1sen!2sno!4v1728490260872!5m2!1sen!2sno"
                 width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
@@ -26,11 +27,11 @@
 
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="148" height="148">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="HVLtopia sin logo" id="logo" width="148" height="148">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
-            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="burger">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="Åpne sidenavigasjonsmeny">
         </label>
-        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
+        <input type="checkbox" name="menu" id="navigasjon-sjekkboks" tabindex="0">
         <nav id="navigasjon-linker">
             <ul>
                 <li><a href="./index.html" class="her">Hjem</a></li>
@@ -56,7 +57,8 @@
                 <h2>Prosjektstatus</h2>
                 <p>
                     Prosjektet er godt igang, mange av sensorene er allerede ferdig montert ute i byen, men det jobbes
-                    fortsatt med å få lagd og montert enda flere. Vi jobber også med å få opp oppetiden til sensorene, slik at de alltid er tilgjengelige.
+                    fortsatt med å få lagd og montert enda flere. Vi jobber også med å få opp oppetiden til sensorene,
+                    slik at de alltid er tilgjengelige.
                     <br>
                     <a href="./vaar-visjon.html">Lær mer</a>
                     <br>
@@ -77,9 +79,11 @@
                     <br>
                     Sensorene er montert på husvegger og tak for unngå drastiske fasadeendringer, slik at byen beholder
                     sin kjente stil.
-                    De tar diverse målinger som kan brukes til å gjøre en vurdering av og kartlegge klimaet og forurensingen i
+                    De tar diverse målinger som kan brukes til å gjøre en vurdering av og kartlegge klimaet og
+                    forurensingen i
                     Bergen.
-                    Dette har vi gjort for at du som innbygger i byen kan få en oversikt over nettopp dette, og for å sette lys
+                    Dette har vi gjort for at du som innbygger i byen kan få en oversikt over nettopp dette, og for å
+                    sette lys
                     på eventuelle problemer, i håp om at de kan fikses.
                     <br>
                     <br>
@@ -88,53 +92,75 @@
                 </p>
             </section>
         </div>
-        <section id="nyhetsholder">
+        <section id="nyhetsholder" tabindex="0">
             <h2>Nyheter</h2>
-            <a>
-                <img src="bilder/vannsensor.webp" loading="lazy" alt="co2-sensor">
-                <h3>Vedlikehold av vannsensorer</h3>
-            </a>
-            <a>
-                <img src="bilder/regnsensor.webp" loading="lazy" alt="">
-                <h3>3 nye regnsensorer</h3>
-            </a>
-            <a>
-                <img src="bilder/Stoysensor.webp" loading="lazy" alt="Bilde av støysensor">
-                <h3>4 nye støysensorer</h3>
-            </a>
-            <a>
-                <img src="bilder/co2-sensor.webp" loading="lazy" alt="Bilde av temperatur sensor">
-                <h3>Kalibrasjon av CO2-sensorer</h3>
-            </a>
-            <a>
-                <img src="bilder/tempsensor.webp" loading="lazy" alt="Bilde av temperatur sensor">
-                <h3>2 nye temperatursensorer</h3>
-            </a>
+            <ul>
+                <li>
+                    <a tabindex="0">
+                        <img src="bilder/vannsensor.webp" loading="lazy" alt="co2-sensor">
+                        <h3>Vedlikehold av vannsensorer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="0">
+                        <img src="bilder/regnsensor.webp" loading="lazy" alt="">
+                        <h3>3 nye regnsensorer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="./fremtiden.html" tabindex="0">
+                        <img src="bilder/Stoysensor.webp" loading="lazy" alt="Bilde av støysensor">
+                        <h3>4 nye støysensorer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="0">
+                        <img src="bilder/co2-sensor.webp" loading="lazy" alt="Bilde av temperatur sensor">
+                        <h3>Kalibrasjon av CO2-sensorer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="0">
+                        <img src="bilder/tempsensor.webp" loading="lazy" alt="Bilde av temperatur sensor">
+                        <h3>2 nye temperatursensorer</h3>
+                    </a>
+                </li>
+            </ul>
         </section>
         <section class="seksjon-full" style="padding-left:0; padding-right: 0;">
             <h2 id="sensorstatus-tittel">Sensorstatus</h2>
-            <div class="statusholder">
-                <a onclick='sensorStatusKlikk("Regnsensorer status")'>
-                    <img src="bilder/regnsensor.webp" loading="lazy" alt="regnsensor">
-                    <p class="sensor-status-aktiv">Regn (8/8)</p>
-                </a>
-                <a onclick='sensorStatusKlikk("CO2-sensorer status")'>
-                    <img src="bilder/co2-sensor.webp" loading="lazy" alt="co2-sensor">
-                    <p class="sensor-status-aktiv">CO2 (20/20)</p>
-                </a>
-                <a onclick='sensorStatusKlikk("Temperatursensorer status")'>
-                    <img src="bilder/tempsensor.webp" loading="lazy" alt="temperatursensor">
-                    <p class="sensor-status-problem">Temperatur (8/10)</p>
-                </a>
-                <a onclick='sensorStatusKlikk("Styøsensorer status")'>
-                    <img src="bilder/Stoysensor.webp" loading="lazy" alt="støysensor">
-                    <p class="sensor-status-aktiv">Støy (15/15)</p>
-                </a>
-                <a onclick='sensorStatusKlikk("Vannkvalitetssensorer status")'>
-                    <img src="bilder/vannsensor.webp" loading="lazy" alt="vannkvalitetssensor">
-                    <p class="sensor-status-inaktiv">Vann (0/7)</p>
-                </a>
-            </div>
+            <ul class="statusholder" tabindex="0">
+                <li>
+                    <a onclick='sensorStatusKlikk("Regnsensorer status")'>
+                        <img src="bilder/regnsensor.webp" loading="lazy" alt="regnsensor">
+                        <p class="sensor-status-aktiv">Regn (8/8)</p>
+                    </a>
+                </li>
+                <li>
+                    <a onclick='sensorStatusKlikk("CO2-sensorer status")'>
+                        <img src="bilder/co2-sensor.webp" loading="lazy" alt="co2-sensor">
+                        <p class="sensor-status-aktiv">CO2 (20/20)</p>
+                    </a>
+                </li>
+                <li>
+                    <a onclick='sensorStatusKlikk("Temperatursensorer status")'>
+                        <img src="bilder/tempsensor.webp" loading="lazy" alt="temperatursensor">
+                        <p class="sensor-status-problem">Temperatur (8/10)</p>
+                    </a>
+                </li>
+                <li>
+                    <a onclick='sensorStatusKlikk("Styøsensorer status")'>
+                        <img src="bilder/Stoysensor.webp" loading="lazy" alt="støysensor">
+                        <p class="sensor-status-aktiv">Støy (15/15)</p>
+                    </a>
+                </li>
+                <li>
+                    <a onclick='sensorStatusKlikk("Vannkvalitetssensorer status")'>
+                        <img src="bilder/vannsensor.webp" loading="lazy" alt="vannkvalitetssensor">
+                        <p class="sensor-status-inaktiv">Vann (0/7)</p>
+                    </a>
+                </li>
+            </ul>
         </section>
 
     </main>
@@ -179,9 +205,9 @@
                                 height="24"></a></li>
                 </ul>
             </div>
-            <section style="text-align: center; grid-column-end: span 2;">
+            <div style="text-align: center; grid-column-end: span 2;">
                 <p>© 2024 HVLtopia</p>
-            </section>
+            </div>
         </div>
     </footer>
 

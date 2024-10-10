@@ -71,7 +71,7 @@ p {
 }
 
 a {
-    color: rgb(5, 162, 5);
+    color: rgb(3, 116, 3);
 }
 
 dialog {
@@ -239,9 +239,8 @@ main section:last-child {
 
 /* Dette er navigasjonsmenyen. */
 #navigasjon-sjekkboks {
-    display: none;
-    width: 0;
-    height: 0;
+    opacity: 0;
+    position: absolute;
 }
 
 nav {
@@ -582,14 +581,19 @@ footer .footer-innhold {
 }
 
 .kollapsibel-sjekkboks {
+    position: absolute;
+    opacity: 0;
+}
+
+.kollapsibel-sjekkboks~div {
     display: none;
 }
 
-.kollapsibel-sjekkboks+div {
-    display: none;
+.kollapsibel-sjekkboks:focus+label {
+    border: 3px solid #000;
 }
 
-.kollapsibel-sjekkboks:checked+div {
+.kollapsibel-sjekkboks:checked~div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }

@@ -16,11 +16,11 @@
 <body>
     <header>
         <div style="flex: 1;"></div>
-        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="Logo" id="logo" width="148" height="148">
+        <img src="bilder/ikoner/HVLtopia_Logo.svg" alt="HVLtopia sin logo" id="logo" width="148" height="148">
         <label for="navigasjon-sjekkboks" id="navigasjon-knapp">
-            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="burger">
+            <img src="bilder/ikoner/burger_meny.svg" width="48" height="48" alt="Åpne sidenavigasjonsmeny">
         </label>
-        <input type="checkbox" name="menu" id="navigasjon-sjekkboks">
+        <input type="checkbox" name="menu" id="navigasjon-sjekkboks" tabindex="0">
         <nav id="navigasjon-linker">
             <ul>
                 <li><a href="./index.html">Hjem</a></li>
@@ -52,11 +52,11 @@
             <h2>Om sensorene</h2>
             <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                 <div class="kollapsibel">
-                    <label for="co2-sensor-toggle">
+                    <input type="checkbox" id="co2-sensor-toggle" class="kollapsibel-sjekkboks" tabindex="0">
+                    <label for="co2-sensor-toggle"  >
                         CO2-sensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
-                    <input type="checkbox" id="co2-sensor-toggle" class="kollapsibel-sjekkboks">
                     <div>
                         <section style="grid-column-end: span 2;">
                             <h3>Hva</h3>
@@ -75,11 +75,11 @@
                     </div>
                 </div>
                 <div class="kollapsibel">
+                    <input type="checkbox" id="regnsensor-toggle" class="kollapsibel-sjekkboks" tabindex="0">
                     <label for="regnsensor-toggle">
                         Regnsensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
-                    <input type="checkbox" id="regnsensor-toggle" class="kollapsibel-sjekkboks">
                     <div>
                         <section style="grid-column-end: span 2;">
                             <h3>Hva</h3>
@@ -97,11 +97,11 @@
                     </div>
                 </div>
                 <div class="kollapsibel">
+                    <input type="checkbox" id="tempsensor-toggle" class="kollapsibel-sjekkboks" tabindex="0">
                     <label for="tempsensor-toggle">
                         Temperatursensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
-                    <input type="checkbox" id="tempsensor-toggle" class="kollapsibel-sjekkboks">
                     <div>
                         <section style="grid-column-end: span 2;">
                             <h3>Hva</h3>
@@ -119,11 +119,11 @@
                     </div>
                 </div>
                 <div class="kollapsibel">
+                    <input type="checkbox" id="stoysensor-toggle" class="kollapsibel-sjekkboks" tabindex="0">
                     <label for="stoysensor-toggle">
                         Støysensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
-                    <input type="checkbox" id="stoysensor-toggle" class="kollapsibel-sjekkboks">
                     <div>
                         <section style="grid-column-end: span 2;">
                             <h3>Hva</h3>
@@ -141,11 +141,11 @@
                     </div>
                 </div>
                 <div class="kollapsibel">
+                    <input type="checkbox" id="vannsensor-toggle" class="kollapsibel-sjekkboks" tabindex="0">
                     <label for="vannsensor-toggle">
                         Vannkvalitetssensor
                         <img src="bilder/ikoner/pil-ned.svg" width="24" alt="pil ned">
                     </label>
-                    <input type="checkbox" id="vannsensor-toggle" class="kollapsibel-sjekkboks">
                     <div>
                         <section style="grid-column-end: span 2;">
                             <h3>Hva</h3>
@@ -217,9 +217,9 @@
                                 height="24"></a></li>
                 </ul>
             </div>
-            <section style="text-align: center; grid-column-end: span 2;">
+            <div style="text-align: center; grid-column-end: span 2;">
                 <p>© 2024 HVLtopia</p>
-            </section>
+            </div>
         </div>
     </footer>
 </body>
