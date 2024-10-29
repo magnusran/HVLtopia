@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python fremvising</title>
+  <style>
+    body {
+      box-sizing: content-box;
+      margin: 0px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .image-section {
+      text-align: center;
+      color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+
+    .image-section:nth-child(-n+2) {
+      flex: 1 1 48%;
+    }
+
+
+    .image-section:nth-child(n+3) {
+      flex: 1 1 30%;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+    }
+
+    .instruction {
+      margin-top: 5px;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 5px 0;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      color: #333;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+    }
+
+    a {
+      background-color: lightgreen;
+      border-radius: 100px;
+      border: none;
+      padding: 8px;
+      box-sizing: border-box;
+      margin: 16px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="../index.html">Tilbake</a>
+  <h1>Python-program framvisning</h1>
+  <h2>Under ser du skjermbilder fra python-programmet og en enkel bruksanvising.</h2>
+  <div class="container">
+    <div class="image-section">
+      <div class="instruction">1. Når du laster inn programmet får du opp to forhåndsdefinerte punkter</div>
+      <img src="Startskjermbilde.png" alt="Skjermbilde av programmet etter oppstart.">
+    </div>
+    <div class="image-section">
+      <div class="instruction">2. Deretter velger du et punkt på kartet som er markert i grønt, og ser dataene for de
+        første 30 dagene</div>
+      <img src="Skjermbilde-punkt.png" alt="Skjermbilde av et punkt valgt i programmet. G">
+    </div>
+    <div class="image-section">
+      <div class="instruction">3. Punktet kan flyttes, og grafen oppdaterer seg 
+      </div>
+      <img src="Skjermbilde-1.png"
+        alt="Skjermbilde av hvordan slideren kan brukes til å få informasjon for det valgte punktet">
+    </div>
+    <div class="image-section">
+      <div class="instruction">4. Videre brukes slideren for å demonstrere, her dag 59</div>
+      <img src="Skjermbilde-2.png" alt="Skjermbilde av hvordan programmet fungerer">
+    </div>
+    <div class="image-section">
+      <div class="instruction">5. Det sjekkes også her at alt blir oppdatert for dag 186</div>
+      <img src="Skjermbilde-3.png" alt="Skjermbilde av hvordan programmet fungerer">
+    </div>
+  </div>
+</body>
+
+</html>
