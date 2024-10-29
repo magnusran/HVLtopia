@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python fremvising</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .image-section {
+      text-align: center;
+      color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+
+    .image-section:nth-child(-n+2) {
+      flex: 1 1 48%; 
+    }
+
+   
+    .image-section:nth-child(n+3) {
+      flex: 1 1 30%; 
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+    }
+
+    .instruction {
+      margin-top: 5px;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 5px 0;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    h1{
+        text-align: center;
+        font-size: 150%;
+        color: #333;
+        font-family:'Courier New', Courier, monospace;
+    }
+    h2{
+        font-size: 100%;
+        color:#333;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <h1>Dette er vår fremvising av python programmet</h1>
+    <h2>Under ser du skjermbilder fra python programmet, og en enkel bruksanvising.</h2>
+  <div class="container">
+    <div class="image-section">
+      <div class="instruction">1. Når du laster inn programmet får du opp 2 forhåndsdefinerte punkter</div>
+      <img src="Startskjermbilde.png" alt="Startskjermbilde">
+    </div>
+    <div class="image-section">
+      <div class="instruction">2. Deretter velger du et punkt på kartet som er markert i grønt, og ser dag 1</div>
+      <img src="Skjermbilde-punkt.png" alt="Skjermbilde av tilfeldig punkt">
+    </div>
+    <div class="image-section">
+      <div class="instruction">3. Deretter kan du bruke slideren for å få oppdatert informasjon til angitt dato, her dag 119</div>
+      <img src="Skjermbilde-1.png" alt="Skjermbilde av hvordan programmet fungerer">
+    </div>
+    <div class="image-section">
+      <div class="instruction">4. Videre brukes slideren for å demonstrere, her dag 251</div>
+      <img src="Skjermbilde-2.png" alt="Skjermbilde av hvordan programmet fungerer">
+    </div>
+    <div class="image-section">
+      <div class="instruction">5. Det sjekkes også her at alt blir oppdatert for dag 303</div>
+      <img src="Skjermbilde-3.png" alt="Skjermbilde av hvordan programmet fungerer">
+    </div>
+  </div>
+
+</body>
+</html>
